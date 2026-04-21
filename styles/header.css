@@ -1,0 +1,56 @@
+:root{
+  --header-height:64px;
+}
+
+.header-right{
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+
+.user-dropdown{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:4px 8px;
+  cursor:pointer;
+}
+
+.user-info{
+  display:flex;
+  flex-direction:column;
+  line-height:1;
+}
+
+.user-name{
+  font-weight:600;
+  color:#111;
+}
+
+.user-email{
+  font-size:12px;
+  color:#666;
+}
+
+.header-right .icon{
+  transition: transform .18s ease, color .18s ease;
+}
+.header-right .icon:hover{
+  transform: translateY(-2px);
+}
+
+/* center search styling */
+.ant-input-search .ant-input{
+  border-radius: 999px;
+  padding-left:16px;
+}
+
+/* responsive: collapse search on small screens */
+@media (max-width: 800px){
+  .ant-input-search { width: 60% !important; }
+}
+
+@media (max-width: 520px){
+  .ant-input-search { display:none !important; }
+  .header-right .user-name, .header-right .user-email{ display:none; }
+}
